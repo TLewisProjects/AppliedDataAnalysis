@@ -78,4 +78,9 @@ data = DataFrame(breastCancerData.data, columns=breastCancerData.feature_names)
 
 breastCorr = data.corr()
 
+print(breastCorr)
+
+cmap = sns.diverging_palette(10, 220, as_cmap=True)
+sns.heatmap(breastCorr, vmin=-1.0, vmax=1.0, cmap=cmap)
+
 # %%
